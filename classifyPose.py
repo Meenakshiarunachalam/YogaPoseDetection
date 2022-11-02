@@ -1,8 +1,7 @@
-#from calculateAngle import *
 import mediapipe as mp
 import matplotlib.pyplot as plt
 import cv2
-from calculateAngle import calculateAngle
+# from calculateAngle import calculateAngle
 
 # Initializing mediapipe pose class.
 mp_pose = mp.solutions.pose
@@ -13,6 +12,28 @@ pose = mp_pose.Pose(static_image_mode=True,
 
 # Initializing mediapipe drawing class, useful for annotation.
 mp_drawing = mp.solutions.drawing_utils
+
+import math
+
+def calculateAngle(landmark1, landmark2, landmark3):
+    
+
+    # Get the required landmarks coordinates.
+    x1, y1, _ = landmark1
+    x2, y2, _ = landmark2
+    x3, y3, _ = landmark3
+
+    # Calculate the angle between the three points
+    angle = math.degrees(math.atan2(y3 - y2, x3 - x2) - math.atan2(y1 - y2, x1 - x2))
+    
+    # Check if the angle is less than zero.
+    if angle < 0:
+
+        # Add 360 to the found angle.
+        angle += 360
+    
+    # Return the calculated angle.
+    return angle
 
 def classifyPose(landmarks, output_image, display=False):
 
@@ -181,6 +202,7 @@ def classifyPose(landmarks, output_image, display=False):
                 label = "savsana"
 
     # -------------------------------------------------------------------------------------------------------------------
+    # check if halasana
 
     if right_knee_angle >= 70 and right_hip_angle <= 110 or left_knee_angle >= 70 and left_knee_angle <= 110:
         if right_hip_angle >= 30 and right_hip_angle <= 55 or left_hip_angle >= 30 and left_hip_angle <= 55:
