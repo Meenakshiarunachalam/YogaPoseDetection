@@ -182,7 +182,10 @@ def classifyPose(landmarks, output_image, display=False):
 
     # -------------------------------------------------------------------------------------------------------------------
 
-
+    if right_knee_angle >= 70 and right_hip_angle <= 110 or left_knee_angle >= 70 and left_knee_angle <= 110:
+        if right_hip_angle >= 30 and right_hip_angle <= 55 or left_hip_angle >= 30 and left_hip_angle <= 55:
+            if right_shoulder_angle >= 60 and right_shoulder_angle <= 90 or left_shoulder_angle >= 60 and left_shoulder_angle <= 90:
+                label = "Halasana"
     # ---------------------------------------------------------------------------------------------------------------------
      # check if camel pose
 

@@ -120,8 +120,13 @@ def gen_frames():  # generate frame by frame from camera
 @app.route('/')
 def index():
     return render_template('index1.html')
-    
-    
+
+@app.route('/index1')
+def index1():
+    return render_template('index1.html')
+@app.route('/demo')
+def demo():
+        return render_template('demo.html')
 @app.route('/video_feed')
 def video_feed():
     return Response(gen_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
