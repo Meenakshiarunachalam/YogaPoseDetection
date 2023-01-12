@@ -3,25 +3,26 @@
         <title>Yoga Detection web app</title>
         <link rel="stylesheet" href="/static/style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/fontawesome.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     </head>
     <body>
         <div class="container">
             <div class="menu">
-                <ul>
+                <ul class="nav">
                     <li class="logo"><img src="/static/log3.png"></li>
-                    <li class="active">Home</li>
-                    <li>About</li>
-                    <li>Settings</li>
-                    <li>Contact</li>
-                    <li><a href="#" class="signupBtn"><span>Sign Up</span></a></li>
+                    <li class="active" style="font-family:Montserrat">Home</li>
+                    <li style="font-family:Montserrat" >About</li>
+                    <li style="font-family:Montserrat">Settings</li>
+                    <li style="font-family:Montserrat">Contact</li>
+                    <li ><a href="#" class="signupBtn" style="font-family:Montserrat"><span>Sign Up</span></a></li>
                 </ul>
             </div>
             <divv class="banner">
                 <div class="appText">
-                    <h3>Yoga detection using mediapipe</h3>
+                    <h3 style="font-family:Montserrat">Yoga detection using mediapipe</h3>
                     
                     <div class="para">
-                        <p>Yoga learning platform for budding yoga artists.you can enjoy free <br>online yoga courses,practise and test.Everyone can learn<br> yoga with ease now .Practise and enjoy your journey with us !</p>
+                        <p style="font-family:Montserrat">Yoga learning platform for budding yoga artists.you can enjoy free <br>online yoga courses,practise and test.Everyone can learn<br> yoga with ease now .Practise and enjoy your journey with us !</p>
                     </div> 
                     <a href="{{ url_for('demo') }}">
                     <div class="playbutton">
@@ -32,7 +33,7 @@
                             </span></div>
                         </button>
                         </a>
-                        <div class="txt">Demo</div>
+                        <div class="txt" style="font-family:Montserrat">Demo</div>
                         <div>
                         <a href="{{ url_for('video_feed') }}">
                         <button type="button" class="btn1" href="index.html">
@@ -42,7 +43,7 @@
                             </span></div>
                         </button>
                         </a>
-                        <div class="txt1">Practise</div>
+                        <div class="txt1" style="font-family:Montserrat">Practise</div>
                         </div>
                         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
                     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script></div>
@@ -53,7 +54,7 @@
                 </div>
             </div>
         </div>
-
+       
 
     </body>
 </html>
